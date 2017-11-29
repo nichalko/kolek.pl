@@ -8,7 +8,7 @@ gulp.task('watch', function() {
 		notify: false,
 		browser: "chrome",
 		server: {baseDir: "app"},		
-		port: 6000
+		port: 8080
 	});
 
 	watch('./app/index.html', function() {

@@ -6,17 +6,31 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-       
+        <link href="https://fonts.googleapis.com/css?family=Khula:300|Quicksand:300" rel="stylesheet">
         <link href="sample.png">
         <!-- Place favicon.ico in the root directory -->
-        <link rel="stylesheet" href="app/temp/styles.css">
+        <link rel="stylesheet" href="temp/styles/styles.css">
     </head>
-    <body>
-        <h1>Hello World!</h1>
+    <body class="is-loading">
+        <header>
+            <nav class="nav">
+                <h1 class="nav__logo">KOLEK.PL<h1>
+            </nav>
+       </header>
+       <div class="main">
+           
+       </div>
+       <footer>
+           
+       </footer>
 
-        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
         <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
         <script>
+            if ('addEventListener' in window) {
+                    window.addEventListener('load', function() { 
+                    document.body.className = document.body.className.replace('is-loading', ''); });
+                    document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
+                };
             window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
             ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
         </script>
